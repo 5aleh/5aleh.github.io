@@ -1,4 +1,4 @@
-var app = angular.module('myAngApp', ['ngRoute', 'ngCookies', 'ngStorage', 'ngAnimate', 'ui.bootstrap']);
+var app = angular.module('myAngApp', ['ngRoute', 'ngCookies', 'ngStorage', 'ui.bootstrap']);
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
@@ -353,7 +353,7 @@ return {
     console.log('wowzdfdfa');
       }
 }])
-.controller("mainController", ['$scope', '$http', 'loggedOnService', '$cookies', '$animate', '$interval', '$localStorage', function($scope, $http, loggedOnService, $cookies, $animate, $interval, $localStorage) {
+.controller("mainController", ['$scope', '$http', 'loggedOnService', '$cookies', '$interval', '$localStorage', function($scope, $http, loggedOnService, $cookies, $interval, $localStorage) {
   // $scope.userName = "Saleh";
   console.log("Main");
   $scope.test = "Saleh";
@@ -466,7 +466,7 @@ return {
   }
 
 }])
-.controller("busController", ['$scope', '$http', 'loggedOnService', '$cookies', '$animate', '$interval', '$localStorage', '$window', 'tripsService', '$location', function($scope, $http, loggedOnService, $cookies, $animate, $interval, $localStorage, $window, tripsService, $location) {
+.controller("busController", ['$scope', '$http', 'loggedOnService', '$cookies', '$interval', '$localStorage', '$window', 'tripsService', '$location', function($scope, $http, loggedOnService, $cookies, $interval, $localStorage, $window, tripsService, $location) {
 
   console.log("Bus Page Functions Working");
   $scope.signedIn = localStorage.getItem('signedIn')
@@ -519,7 +519,7 @@ $scope.bus_trips = tripsService.getBusTrips()
  }
 
 }])
-.controller("flightController", ['$scope', '$http', 'loggedOnService', '$cookies', '$animate', '$interval', '$localStorage', '$window', 'tripsService', '$location', function($scope, $http, loggedOnService, $cookies, $animate, $interval, $localStorage, $window, tripsService, $location) {
+.controller("flightController", ['$scope', '$http', 'loggedOnService', '$cookies', '$interval', '$localStorage', '$window', 'tripsService', '$location', function($scope, $http, loggedOnService, $cookies, $interval, $localStorage, $window, tripsService, $location) {
 
   console.log("Flight Page Functions Working");
   $scope.signedIn = localStorage.getItem('signedIn')
@@ -572,7 +572,7 @@ $scope.flight_trips = tripsService.getFlightTrips()
  }
 
 }])
-.controller("trainController", ['$scope', '$http', 'loggedOnService', '$cookies', '$animate', '$interval', '$localStorage', '$window', 'tripsService', '$location', function($scope, $http, loggedOnService, $cookies, $animate, $interval, $localStorage, $window, tripsService, $location) {
+.controller("trainController", ['$scope', '$http', 'loggedOnService', '$cookies', '$interval', '$localStorage', '$window', 'tripsService', '$location', function($scope, $http, loggedOnService, $cookies, $interval, $localStorage, $window, tripsService, $location) {
 
   console.log("Train Page Functions Working");
   $scope.signedIn = localStorage.getItem('signedIn')
