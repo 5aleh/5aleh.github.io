@@ -240,7 +240,7 @@ return {
 
 .controller("profileController", ['$scope', '$http', '$cookies', 'loggedOnService', '$location', function($scope, $http, $cookies, loggedOnService, $location) {
   // $scope.userName = "Saleh";
-  if(localStorage.getItem('signedIn')==undefined){
+  if(localStorage.getItem('signedIn') == undefined){
     $location.path('/')
   }
   $scope.test = "Saleh";
@@ -724,7 +724,7 @@ $scope.train_trips = tripsService.getTrainTrips()
 }])
 .controller("passwordController", ['$scope', '$http', '$window', 'loggedOnService', '$cookies', '$location', function($scope, $http, $window, loggedOnService, $cookies, $location) {
 
-  if(localStorage.getItem('signedIn')==undefined){
+  if(localStorage.getItem('signedIn') == undefined){
     $location.path('/')
   }
   // console.log($cookies.get('uPassword'))
@@ -771,10 +771,7 @@ $scope.train_trips = tripsService.getTrainTrips()
   $scope.signOut = function() {
     loggedOnService.addUser('Sign In')
     loggedOnService.signedIn = false
-    $cookies.remove('uName');
-    $cookies.remove('uEmail');
-    $cookies.remove('signedIn');
-    $cookies.remove('uId');
+    localStorage.clear()
     console.log('clicked')
   };
 
