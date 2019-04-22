@@ -238,7 +238,7 @@ return {
       }
 }])
 
-.controller("profileController", ['$scope', '$http', '$cookies', 'loggedOnService', function($scope, $http, $cookies, loggedOnService) {
+.controller("profileController", ['$scope', '$http', '$cookies', 'loggedOnService', '$location', function($scope, $http, $cookies, loggedOnService, $location) {
   // $scope.userName = "Saleh";
   if(localStorage.getItem('signedIn')==undefined){
     $location.path('/')
